@@ -18,13 +18,12 @@
   --Color-Purple-500: hsl(263, 55%, 52%);
   --Color-White: hsl(0, 0%, 100%);
   --card-w1: 250px;
-  --card-w2: 400px;
-  --card-h: 256px;
-  --gap: 28px;
+  --gap: 30px;
   --img: 36px;
-  --width: 500px;
+  --width: 530px;
   --width-max: 250px;
   --width-min: 250px;
+  --height: 280px;
 }
 
 body {
@@ -37,17 +36,16 @@ body {
 /* las cajas */
 .card {
   color: inherit;
-  padding: 34px 33px;
+  padding: 30px;
   border-radius: 8px;
-  border: 1px solid black;
   box-shadow: 60px 60px 70px var(--Color-Grey-200);
-  overflow: hidden;
 }
 
 /* los contenedores */
 .container-main {
   width: max-content;
   min-width: var(--card-w1);
+  /* max-height: max-content; */
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -57,7 +55,8 @@ body {
 }
 
 .container-left {
-  width: 800px;
+  width: 810px;
+  /* height: max-content; */
   min-width: var(--card-w1);
   display: flex;
   justify-content: space-around;
@@ -68,7 +67,6 @@ body {
 .cardh {
   width: var(--width);
   min-width: var(--width-min);
-  height: var(--width-min);
   color: var(--Color-White);
   background-color: var(--Color-Purple-500);
 }
@@ -76,13 +74,12 @@ body {
 .cardc {
   width: var(--width-max);
   min-width: var(--width-min);
-  height: 240px;
 }
 
 .card-right {
   width: var(--width-min);
   min-width: var(--width-min);
-  color: var(--Color-Grey-500);
+  color: var(--Color-Black);
   background-color: var(--Color-White);
 }
 
@@ -133,16 +130,16 @@ body {
 }
 
 .cardc .paragraph1 {
-  width: 89%;
+  width: 92%;
 }
 
 .cardc .paragraph2 {
-  width: 89%;
+  /* width: 89%; */
 }
 
 .paragraph1 {
-  font-size: 1.2rem;
-  letter-spacing: 0.56px;
+  font-size: 1.06rem;
+  letter-spacing: 0.6px;
   color: var(--Color-White);
   padding: 20px 0;
   opacity: 0.9;
@@ -150,9 +147,9 @@ body {
 }
 
 .paragraph2 {
-  font-size: 0.81rem;
-  letter-spacing: 0.82px;
-  line-height: 1.5;
+  font-size: 0.7rem;
+  letter-spacing: 0.6px;
+  line-height: 1.6;
   color: var(--Color-White);
   opacity: 0.7;
   color: inherit;
@@ -164,8 +161,12 @@ body {
 }
 
 @media (width < 1200px) {
+  .container-main {
+    margin: 40px 30px;
+  }
   .card {
     padding: 34px 31px;
+    min-width: var(--width-min);
   }
   .datos .datos__name {
     font-size: 0.76rem;
@@ -174,28 +175,26 @@ body {
     font-size: 0.6rem;
   }
   .paragraph1 {
-    font-size: 1.16rem;
+    font-size: 0.86rem;
   }
   .cardc .paragraph1 {
     width: 100%;
-    font-size: 1.1rem;
   }
   .paragraph2 {
-    font-size: 0.74rem;
-    letter-spacing: 0.28px;
+    font-size: 0.61rem;
+    letter-spacing: 0.18px;
   }
 
   .cardc {
     height: max-content;
   }
 
+  .cardh {
+    height: max-content;
+  }
+
   .cardc .paragraph1,
   .cardc .paragraph2 {
     width: 100%;
-  }
-  .card-right .paragraph2 {
-    font-size: 0.76rem;
-    letter-spacing: 0.05px;
-    line-height: 1.3;
   }
 }
