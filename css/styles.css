@@ -39,6 +39,7 @@ body {
   padding: 30px;
   border-radius: 8px;
   box-shadow: 60px 60px 70px var(--Color-Grey-200);
+  background-color: var(--Color-White);
 }
 
 /* los contenedores */
